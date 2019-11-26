@@ -10,7 +10,7 @@ int main (){
 
 
 char ** args = parse_args( char* line ){
-  char foo[100] = "echo I am the Big Hancho";
+  char foo[100] = ;
   char *cursor = foo;
   char *token;
   while(cursor != NULL){

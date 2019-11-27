@@ -4,18 +4,21 @@
 #include <string.h>
 
 int main (){
-  parse_args("ls all all all")
+  char **argV = parse_args("ls all all all")
   return 0;
 }
 
 
-char ** args = parse_args( char* line ){
-  char foo[100] = ;
-  char *cursor = foo;
+char ** parse_args( char line[100] ){
+  char *cursor = line;
   char *token;
+  char **args;
+  int i = 0;
   while(cursor != NULL){
     token = strsep(&curr, " ");
     printf("\nToken: [%s]\tCursor: [%s]", token, cursor);
+	*(args + i) = 
+	i++;
   }
   return NULL;
 }

@@ -3,19 +3,17 @@
 #include <unistd.h>
 #include <string.h>
 
-int main (){
-  parse_args("ls all all all")
-  return 0;
-}
-
-
-char ** args = parse_args( char* line ){
-  char foo[100] = ;
-  char *cursor = foo;
-  char *token;
+char ** parse_args( char line[100] ){
+  char *cursor = line;
+  char *token = NULL;
   while(cursor != NULL){
-    token = strsep(&curr, " ");
+    token = strsep(&cursor, " ");
     printf("\nToken: [%s]\tCursor: [%s]", token, cursor);
   }
   return NULL;
+}
+
+int main (){
+  parse_args("ls all all all");
+  return 0;
 }

@@ -4,9 +4,9 @@
 #include <string.h>
 
 char ** parse_args( char * line ){
-  char **to_return; //check
+  char *to_return[10]; //check
   int i = 0;
-  while( *line != NULL ){ 
+  while( line != NULL ){ 
     to_return[i] = strsep( &line, " \t\n" );
     i++;
   }
